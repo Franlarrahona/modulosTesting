@@ -2,11 +2,12 @@
   "name": "tercerapreentrega",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon src/app --mode=devel",
-    "start": "node src/app --mode=prod"
+    "start": "node src/app --mode=prod",
+    "test": "mocha test/products.routes.test.js"
   },
   "author": "",
   "license": "ISC",
