@@ -7,7 +7,8 @@ const controller = new Controller();
 
 router.get('/', async (req,res) =>{
     try{
-        res.status(200).send({ status: 'ok', data: await controller.get() });
+        const result = await controller.get()
+        res.status(200).send({ status: 'ok', payload: result });
     }catch(err){
         res.status(500).send({ satus: 'err', data: err.message});
     }
